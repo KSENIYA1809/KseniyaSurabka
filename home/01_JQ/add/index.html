@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #password_1{
+            margin-bottom: 2px;
+        }
+        #password_2{
+            margin-bottom: 15px;
+        }
+        form{
+            width: 25em;
+        }
+    </style>
+</head>
+<body> 
+
+<h2>Проверка пароля</h2>
+<form method="post" action="http://fe.it-academy.by/TestForm.php">             
+    <fieldset>
+        <input type="text" name="password_1" id="password_1"> * Пароль<br>
+        <input type="text" name="password_2" id="password_2"> * Повторите пароль<br>
+        <input type="submit" value="Отправить"><br>
+    </fieldset>
+</form>
+
+<script
+    src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+    crossorigin="anonymous">
+</script>
+
+<script>
+    $(document).ready(function($){
+    
+        $('#password_1').on('change', function(){
+            var value_input1 = $('#password_1').val();
+            var value_input2 = $('#password_2').val();
+            if(value_input1 != value_input2){
+                $('#password_1').css('backgroundColor', 'red');
+                $('#password_2').css('backgroundColor', 'red');
+            } else{
+                $('#password_1').css('backgroundColor', 'green');
+                $('#password_2').css('backgroundColor', 'green');
+            }  
+        });
+
+        $('#password_2').on('change', function(){
+            var value_input1 = $('#password_1').val();
+            var value_input2 = $('#password_2').val();
+            if(value_input1 != value_input2){
+                $('#password_1').css('backgroundColor', 'red');
+                $('#password_2').css('backgroundColor', 'red');
+            } else{
+                $('#password_1').css('backgroundColor', 'green');
+                $('#password_2').css('backgroundColor', 'green');
+            }  
+        })
+    });
+ 
+</script>
+
+
+</body>
+</html>
