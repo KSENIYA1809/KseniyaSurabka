@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <p class="thanks">{{ thanks }}</p>
+    <a class="back" href="{% url 'start' %}">
+        <div>Back to main page</div>
+    </a>
+    
+{% endblock %}

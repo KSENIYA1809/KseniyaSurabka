@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h2 class="headline">Timetable for group lessons</h2>
+    
+        <table class="timetable">
+            <tr>
+                <th>Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+            </tr>
+            {% for timetable in timetable_list %}
+            <tr>
+                <td>{{ timetable.time_lesson }}</td>
+                <td>{{ timetable.monday }}</td>
+                <td>{{ timetable.tuesday }}</td>
+                <td>{{ timetable.wednesday }}</td>
+                <td>{{ timetable.thursday }}</td>
+                <td>{{ timetable.friday }}</td>
+                <td>{{ timetable.saturday }}</td>
+                <td>{{ timetable.sunday }}</td>
+
+            </tr>
+            {% endfor %}
+        </table>
+      
+{% endblock %}
