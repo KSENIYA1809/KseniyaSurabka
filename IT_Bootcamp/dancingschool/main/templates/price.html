@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h2 class="headline">Price for group lessons</h2>
+    
+        <table class="table">
+            <tr>
+                <th>Number of lessons</th>
+                <th>Price per lesson 60 minutes</th>
+                <th>Price per lesson 90 minutes</th>
+            </tr>
+            {% for price in price_list %}
+            <tr>
+                <td>{{ price.number_of_classes }}</td>
+                <td>{{ price.price_60_min }}</td>
+                <td>{{ price.price_90_min }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+      
+{% endblock %}

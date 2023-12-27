@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <p class="start">{{ start }}</p>
+    <img class="photo_main" src="{% static 'main/img/Зал.png' %}">
+    <p class="start">{{ start_2 }}</p>
+    <div class="start">
+        <a href="{% url 'add_free_form' %}" id="button">Sign up for a lesson</a>
+    </div>
+
+      
+    
+    <!-- <figure  class="photo_direction_wraper">
+        <img class="photo_direction" src="{% static 'main/img/Кот_танцы.gif' %}">
+        <img class="photo_direction" src="{% static 'main/img/Кот_йога.png' %}">
+        <figcaption>Dance</figcaption>
+        <figcaption>Yoga</figcaption>
+    </figure > -->
+    
+   
+
+{% endblock %}
